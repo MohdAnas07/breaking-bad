@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import CSS from './style.module.css'
 import ListItem from '../ListItem/ListItem'
 import SearchIcon from '@material-ui/icons/Search';
@@ -13,6 +13,8 @@ import Footer from '../Footer/Footer';
 
 const List = () => {
     const [page, setPage] = useState(1)
+    // const [items, setItems] = useState([]);
+    // const [isPending, setIsPending] = useState(true)
     const [searchName, setSearchName] = useState('')
 
     AOS.init();
@@ -20,23 +22,23 @@ const List = () => {
 
     const URL = 'https://www.breakingbadapi.com/api/characters'
     let { data, isPending, error } = Api(URL)
-    // console.log(data, isPending, error)
+    // setItems(data)
+    // setIsPending(isPending)
+
 
     // let searchItems = [...data];
+
+    // if (searchName.length > 0) {
+    //     items = items.filter((elem) =>
+    //         elem.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
+    //     );
+    //     console.log(items);
+    // }
+
     const searchHanlder = (e) => {
-        let value = e.target.value
-        setSearchName(value)
-        console.log(searchName)
-
-        if (value.length > 0) {
-            data = data.filter((elem) =>
-                elem.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-            );
-            console.log(data);
-        }
-
-
+        setSearchName(e.target.value);
     }
+
 
     return (
         <>
@@ -63,6 +65,8 @@ const List = () => {
                                 className={CSS.filter_search} />
                         </div>
                     </div>
+
+                    <hr className={CSS.hr} />
 
                     <div data-aos="fade-up" className={CSS.list}>
                         {isPending ? "" : data.slice((page - 1) * 12, page * 12).map((ele) => <ListItem key={ele.char_id} {...ele} />)}

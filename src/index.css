@@ -43,6 +43,7 @@ a {
   --box-shadow-light: 2px 2px 8px rgba(255, 255, 255, 0.4);
 
   --transition-common: all 0.15s linear !important;
+  --transition-secondary: all 500ms linear !important;
 
   --border-common: 1px solid #fff;
   --border-secondary: 2px solid #fff;

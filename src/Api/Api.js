@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const Api = (URL) => {
+
     const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(true)
     const [error, setError] = useState(null)

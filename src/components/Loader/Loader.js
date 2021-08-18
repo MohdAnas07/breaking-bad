@@ -4,16 +4,23 @@ import CachedIcon from '@material-ui/icons/Cached';
 
 const Loader = () => {
 
-    const styleForPaper = {
-        width: '200px',
-        height: '200px',
-    }
-
     return (
+
         <div style={{ color: 'black' }} className={CSS.loader} >
-            <CachedIcon style={styleForPaper} className={CSS.loaderIcon} />
+            <p>l</p>
+            <p>o</p>
+            <p>a</p>
+            <p>d</p>
+            <p>i</p>
+            <p>n</p>
+            <p>g</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
         </div>
     )
 }
 
 export default Loader
+
+// <CachedIcon style={styleForPaper} className={CSS.loaderIcon} />

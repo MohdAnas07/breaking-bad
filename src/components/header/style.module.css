@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .header {
     width: 100vw;
     height: 8rem;
@@ -14,6 +16,7 @@
     box-shadow: var(--box-shadow-light);
     z-index: 999;
     font-family: 'Lobster', 'cursive' !important;
+
 }
 
 .logo {
@@ -22,11 +25,12 @@
 }
 
 .header_heading {
+    cursor: pointer;
     font-size: var(--font-extra-large);
     font-weight: 700;
-    /* background-image: linear-gradient(to right, var(--primary), var(--secondary)); */
-    /* -webkit-background-clip: text; */
+    background-image: linear-gradient(to right, #0cc723, #000);
     color: #fff;
+    font-family: 'Pacifico', cursive !important;
 }
 
 @media (max-width: 340px) {
