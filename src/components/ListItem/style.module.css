@@ -1,0 +1,56 @@
+.listItem {
+    font-size: var(--font-medium);
+    margin: 2rem;
+}
+
+
+
+.listItem p {
+    font-weight: 400;
+}
+
+.characterDetailLine {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-medium);
+}
+
+hr {
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.marginRight {
+    margin-right: 10px;
+}
+
+.cardText {
+    margin-right: 30px;
+}
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 0; */
+    /* word-wrap: break-word; */
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    width: 26rem !important;
+    height: 500px;
+}
+
+.cardImg {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    width: 100%;
+    height: 268px;
+}
+
+.cardTitle {
+    font-weight: bold;
+    font-size: var(--font-large);
+}

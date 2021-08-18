@@ -1,0 +1,13 @@
+.loader {
+    color: #000 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 85vh;
+    background-color: #000;
+}
+
+.loaderIcon {
+    color: var(--primary);
+}
