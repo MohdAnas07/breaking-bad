@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .listItem {
     font-size: var(--font-medium);
-    margin: 2rem;
+    /* margin: 2rem; */
+    font-family: 'Pacifico', cursive;
 }
 
 
@@ -41,6 +44,7 @@ hr {
     border-radius: .25rem;
     width: 26rem !important;
     height: 500px;
+    margin-bottom: 4rem;
 }
 
 .cardImg {
@@ -53,4 +57,11 @@ hr {
 .cardTitle {
     font-weight: bold;
     font-size: var(--font-large);
+}
+
+
+@media (max-width:1450px) {
+    .listItem {
+        margin-right: 2rem;
+    }
 }
