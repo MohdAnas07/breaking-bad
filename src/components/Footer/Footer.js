@@ -1,9 +1,7 @@
 import React from 'react';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-
 import CSS from './style.module.css'
-
 
 const Footer = ({ itemPerPage = 12, totalItems, page, setPage }) => {
 
