@@ -14,7 +14,6 @@ import Footer from '../Footer/Footer';
 const List = () => {
     const [page, setPage] = useState(1)
     // const [items, setItems] = useState([]);
-    // const [isPending, setIsPending] = useState(true)
     const [searchName, setSearchName] = useState('')
 
     AOS.init();
@@ -22,11 +21,9 @@ const List = () => {
 
     const URL = 'https://www.breakingbadapi.com/api/characters'
     let { data, isPending, error } = Api(URL)
+
     // setItems(data)
     // setIsPending(isPending)
-
-
-    // let searchItems = [...data];
 
     // if (searchName.length > 0) {
     //     items = items.filter((elem) =>
@@ -70,9 +67,7 @@ const List = () => {
 
                     <div data-aos="fade-up" className={CSS.list}>
                         {isPending ? "" : data.slice((page - 1) * 12, page * 12).map((ele) => <ListItem key={ele.char_id} {...ele} />)}
-
                     </div>
-
 
                 </div>)
 
