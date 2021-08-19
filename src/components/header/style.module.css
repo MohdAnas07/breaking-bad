@@ -33,9 +33,9 @@
     font-family: 'Pacifico', cursive !important;
 }
 
-@media (max-width: 340px) {
+@media (max-width: 390px) {
     .header {
-        padding: 0 5px;
+        padding: 0 3px;
     }
 
     .header_heading {
