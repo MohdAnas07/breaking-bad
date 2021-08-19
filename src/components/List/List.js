@@ -13,7 +13,7 @@ import Footer from '../Footer/Footer';
 
 const List = () => {
     const [page, setPage] = useState(1)
-    // const [items, setItems] = useState([]);
+    const [items, setItems] = useState([]);
     const [searchName, setSearchName] = useState('')
 
     AOS.init();
@@ -22,15 +22,18 @@ const List = () => {
     const URL = 'https://www.breakingbadapi.com/api/characters'
     let { data, isPending, error } = Api(URL)
 
-    // setItems(data)
-    // setIsPending(isPending)
 
-    // if (searchName.length > 0) {
-    //     items = items.filter((elem) =>
-    //         elem.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
-    //     );
-    //     console.log(items);
-    // }
+    // useEffect(() => {
+    //     setItems(data);
+    //     if (searchName.length > 0) {
+    //         let item = items.filter((elem) =>
+    //             elem.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
+    //         );
+    //         setItems(item)
+    //     }
+
+    // }, [items, searchName])
+
 
     const searchHanlder = (e) => {
         setSearchName(e.target.value);
@@ -66,7 +69,7 @@ const List = () => {
                     <hr className={CSS.hr} />
 
                     <div data-aos="fade-up" className={CSS.list}>
-                        {isPending ? "" : data.slice((page - 1) * 12, page * 12).map((ele) => <ListItem key={ele.char_id} {...ele} />)}
+                        {data && (isPending ? "" : data.slice((page - 1) * 12, page * 12)).map((ele) => <ListItem key={ele.char_id} {...ele} />)}
                     </div>
 
                 </div>)

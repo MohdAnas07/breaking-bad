@@ -44,7 +44,7 @@ hr {
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
     width: 26rem !important;
-    height: 500px;
+    height: 485px;
     margin-bottom: 4rem;
     overflow: hidden !important;
     transition: var(--transition-secondary);
@@ -56,14 +56,14 @@ hr {
     width: 100%;
     height: 250px;
     cursor: pointer;
-    object-fit: unset;
+    /* object-fit: unset; */
+    object-fit: cover !important;
     transition: var(--transition-secondary);
 }
 
 .cardImg:hover {
     transition: var(--transition-secondary);
-    height: 300px !important;
-    object-fit: cover !important;
+    height: 330px !important;
 }
 
 .cardTitle {
