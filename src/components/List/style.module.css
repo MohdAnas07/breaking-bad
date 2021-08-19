@@ -124,12 +124,16 @@
     }
 
     .filter_name {
-        width: 300px;
+        width: 280px;
         margin-bottom: 2rem;
     }
 
     .filter_search {
         top: 38%;
+    }
+
+    .filters {
+        margin-bottom: 0;
     }
 
 }
